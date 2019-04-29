@@ -1,0 +1,30 @@
+Working message {Loading update...}
+
+Do $cinst.$_notice(con("Getting files in ",$cinst.$_getPathToApplicationFolder(pcFolderName)))
+
+Do $cinst.$_getApplicationFolderContents(pcFolderName) Returns llApplicationFiles
+
+For llApplicationFiles.$line from 1 to llApplicationFiles.$linecount step 1
+	Calculate lcDestinationPath as con($cinst.$_getPathToProgramFolder(pcFolderName),pathsep(),llApplicationFiles.Name)
+	
+	#Don't update myself
+	If low(lcDestinationPath)=low($clib.$pathname)
+		Jump to start of loop
+	End If
+	
+	Do $cinst.$_notice(con("Updating ",lcDestinationPath," from ",llApplicationFiles.Path))
+	
+	If FileOps.$doesfileexist(lcDestinationPath)
+		Do FileOps.$deletefile(lcDestinationPath) Returns liResult
+		If liResult<>0
+			Do $cinst.$_error(con("Error deleting ",lcDestinationPath,": ",liResult))
+		End If
+	End If
+	
+	Do FileOps.$copyfile(llApplicationFiles.Path,lcDestinationPath) Returns liResult
+	If liResult<>0
+		Do $cinst.$_error(con("Error copying ",llApplicationFiles.Path," to ",lcDestinationPath,": ",liResult))
+	End If
+End For
+
+Close working message

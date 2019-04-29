@@ -1,0 +1,49 @@
+{
+	"classtype": "kTask",
+	"omnisversion": "10.0",
+	"internalversion": 102,
+	"tvardefs": [
+
+	],
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "icLibraryPath",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iirLibrary",
+			"order": 2,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ioLibraryShutdown",
+			"order": 1,
+			"type": "kObject",
+			"subtype": "ogLibraryShutdown",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2016-08-13 12:37:05",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2019-04-28 21:25:00",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": 17
+	}
+}

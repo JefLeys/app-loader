@@ -1,0 +1,10 @@
+Do loFile.$openfile(pcPathToFile,kTrue) Returns lbOK
+If lbOK=kFalse
+	Do $cinst.$_error(con("Failed to open ",pcPathToFile))
+	Quit method
+End If
+
+Do loFile.$readcharacter(kUniTypeAuto,lcFileContents)
+Do loFile.$closefile()
+
+Quit method lcFileContents

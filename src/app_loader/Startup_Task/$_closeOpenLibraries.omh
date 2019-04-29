@@ -1,0 +1,12 @@
+Do $cinst.$_notice("Closing other libraries")
+
+Do $libs.$makelist($ref.$ref) Returns llOpenLibraries
+Calculate llOpenLibraries.$cols.1.$name as "Ref"
+
+For llOpenLibraries.$line from 1 to llOpenLibraries.$linecount step 1
+	If llOpenLibraries.Ref()=$clib()
+		Jump to start of loop
+	End If
+	
+	Do $libs.$remove(llOpenLibraries.Ref())
+End For

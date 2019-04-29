@@ -1,0 +1,18 @@
+#If there is other code in the stack, let it play out
+Do sys(192) Returns llMethodStack
+If llMethodStack.$linecount>1
+	Do $cinst.$starttimer()
+	Quit method
+End If
+
+#Close the library
+Do $libs.$remove(iirLibrary)
+
+#If the library was closed, notify $ctask it was shutdown
+If isclear($libs.$findname(iirLibrary().$name))
+	Do $ctask.$libraryShutdown()
+	Quit method
+End If
+
+#Otherwise restart the timer
+Do $cinst.$starttimer()

@@ -1,0 +1,6 @@
+Set reference iirLibrary to pirLibrary
+Calculate icLibraryPath as iirLibrary.$pathname
+
+Do $cinst.$_notice(con("Shutting down ",icLibraryPath))
+
+Do ioLibraryShutdown.$shutdownLibrary(iirLibrary)

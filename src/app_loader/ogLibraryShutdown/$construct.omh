@@ -1,0 +1,5 @@
+#Enter your initialization code here
+Calculate $cinst.$timervalue as 200
+Calculate $cinst.$useseconds as kFalse
+Calculate $cinst.$autoreset as kFalse
+Calculate $cinst.$reentrant as kFalse

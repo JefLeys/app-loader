@@ -1,0 +1,7 @@
+Do $cinst.$_getPathToApplicationFolder(pcFolderName) Returns lcPathToApplicationFolder
+
+Do FileOps.$filelist(kFileOpsIncludeFiles,lcPathToApplicationFolder,kFileOpsInfoFullName+kFileOpsInfoName) Returns llApplicationFiles
+Calculate llApplicationFiles.$cols.1.$name as "Name"
+Calculate llApplicationFiles.$cols.2.$name as "Path"
+
+Quit method llApplicationFiles

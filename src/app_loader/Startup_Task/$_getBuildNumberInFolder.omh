@@ -1,0 +1,5 @@
+Calculate lcPathToApplicationBuildNumberFile as con(pcFolder,pathsep(),"build_number.txt")
+
+Do $cinst.$_readFile(lcPathToApplicationBuildNumberFile) Returns liApplicationBuildNumber
+
+Quit method liApplicationBuildNumber

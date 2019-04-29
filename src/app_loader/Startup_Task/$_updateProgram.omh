@@ -1,0 +1,4 @@
+Do $cinst.$_closeOpenLibraries()
+
+Do $cinst.$_syncFolder("lib")
+Do $cinst.$_syncFolder("startup")

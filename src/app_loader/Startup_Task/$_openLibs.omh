@@ -1,0 +1,9 @@
+Do $cinst.$_notice("Opening supporting libraries")
+
+Do $cinst.$_getPathToProgramFolder("lib") Returns lcLibDirectory
+Do FileOps.$filelist(kFileOpsIncludeFiles,lcLibDirectory,kFileOpsInfoFullName,"*.lbs") Returns llLibraries
+Calculate llLibraries.$cols.1.$name as "FilePath"
+
+For llLibraries.$line from 1 to llLibraries.$linecount step 1
+	Do $libs.$add(llLibraries.FilePath)
+End For

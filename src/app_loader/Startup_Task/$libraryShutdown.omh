@@ -1,0 +1,9 @@
+Do $cinst.$_notice("Updating files")
+
+Do $cinst.$_updateProgram()
+
+Do $cinst.$_openLibs()
+
+Do $cinst.$_notice("Restarting ",icLibraryPath)
+
+Do $libs.$add(icLibraryPath)

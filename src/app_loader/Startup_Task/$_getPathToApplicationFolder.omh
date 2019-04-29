@@ -1,0 +1,1 @@
+Quit method con(trim(sys(215),kFalse,kTrue,pathsep()),pathsep(),"firstruninstall",pathsep(),pcFolderName)

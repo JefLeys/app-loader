@@ -1,0 +1,23 @@
+#Fail fast in development
+If sys(2)=17
+	Quit method
+End If
+
+Do $cinst.$_notice("Starting app loader")
+
+Do $cinst.$_closeOpenLibraries()
+
+Do $cinst.$_getProgramBuildNumber() Returns liProgramBuildNumber
+Do $cinst.$_getApplicationBuildNumber() Returns liApplicationBuildNumber
+
+Do $cinst.$_notice(con("Program build number: ",liProgramBuildNumber))
+Do $cinst.$_notice(con("Application build number: ",liApplicationBuildNumber))
+
+If liProgramBuildNumber<>liApplicationBuildNumber
+	Do $cinst.$_notice("Build numbers differ; updating program")
+	Do $cinst.$_updateProgram()
+End If
+
+Do $cinst.$_openLibs()
+
+Do $cinst.$_notice("App loader complete")

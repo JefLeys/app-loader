@@ -1,0 +1,1 @@
+Quit method con(trim(FileOps.$parentdir(trim(FileOps.$parentdir($clib.$pathname),kFalse,kTrue,pathsep())),kFalse,kTrue,pathsep()),pathsep(),pcFolderName)
