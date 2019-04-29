@@ -1,6 +1,10 @@
 # app-loader
 An Omnis library to load prerequisite libraries and automatically update libraries under the user's application data folder
 
+## Requirements
+* Omnis Studio 10.0 or later
+* macOS or Windows (though this may work on Linux without modification)
+
 ## Pre-loading libraries
 `app_loader.lbs` manages loading one or more prerequisite libraries before starting a final, primary library. This works by separating prerequisite libraries into a `lib` folder and leaving the final library in `startup`.
 
